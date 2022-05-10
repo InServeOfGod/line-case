@@ -2,12 +2,145 @@
 
 /* variables */
 
+:root {
+    --primary-color: #00aeef;
+    --secondary-color: #91daf6;
+    --third-color: #858585;
+    --footer-bg-color: #151c27;
+    --footer-fg-color: #2c3b52;
+    --wireless-box-color: #ffaa16;
+    --ball-box-color: #ec5b95;
+    --twitter-box-color: #00aeef;
+    --facebook-box-color: #0054a6;
+    --gray-boxes-color: #abbcc3;
+}
+
+/*
+    blue=00aeef, gray-text=91daf6, footer=151c27, footer-text=2c3b52, wireless=ffaa16, ball=ec5b95, twitter=00aeef,
+    facebook=0054a6, boxes=abbcc3
+*/
+
 /* fonts */
+
+/* Georgia, Sintony */
+
+@font-face {
+    font-family: 'georgiaregular';
+    src: url('../fonts/georgia-webfont.woff2') format('woff2'),
+    url('../fonts/georgia-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
 /* tag selectors */
 
+nav svg {
+    fill: white;
+}
+
+header::before {
+    content: url("../img/header-bg.png");
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    right: 200px;
+    top: 130px;
+}
+
 /* id selectors */
+
+#header-man img {
+    position: absolute;
+    bottom: -101px;
+}
+
+#email::placeholder {
+    color: white;
+}
+
+#email {
+    position: relative;
+}
+
+#email::after {
+    position: absolute;
+    content: "DAD";
+    right: 0;
+    top: 0;
+}
 
 /* class selectors */
 
+.primary-fg-color {
+    color: var(--primary-color);
+}
+
+.primary-bg-color {
+    background-color: var(--primary-color);
+}
+
+.secondary-fg-color {
+    color: var(--secondary-color);
+}
+
+.secondary-bg-color {
+    background-color: var(--secondary-color);
+}
+
+.third-fg-color {
+    color: var(--third-color);
+}
+
+.third-bg-color {
+    background-color: var(--third-color);
+}
+
+.footer-fg-color {
+    color: var(--footer-fg-color);
+}
+
+.footer-bg-color {
+    background-color: var(--footer-bg-color);
+}
+
+.wireless-box-color {
+    background-color: var(--wireless-box-color);
+}
+
+.ball-box-color {
+    background-color: var(--ball-box-color);
+}
+
+.twitter-box-color {
+    background-color: var(--twitter-box-color);
+}
+
+.facebook-box-color {
+    background-color: var(--facebook-box-color);
+}
+
+.gray-boxes-color {
+    background-color: var(--gray-boxes-color);
+}
+
+.gray-box {
+    width: 190px;
+    height: 159px;
+    border-radius: 5px;
+    background-color: var(--gray-boxes-color);
+}
+
 /* custom responsive */
+
+@media screen and (max-width: 968px) {
+    #header-man {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 578px) {
+    #illustrator {
+        display: none;
+    }
+}
